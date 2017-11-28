@@ -3,10 +3,10 @@
 require 'Twitter'
 
 client = Twitter::REST::Client.new do |config|
-  config.consumer_key        = "kVGPHiPyzus4obWSRaG8mnYdy"
-  config.consumer_secret     = "nPba5PBnT8vi9nLpMWR7zxBsd7hamjhupL1gFXxbpBaWPwePrf"
-  config.access_token        = "934359443667636224-ftTiowgQm1va10XDe52iDKk6dkY5FJp"
-  config.access_token_secret = "xcBIpac2QdXTp6USMLZhiCSmXOVUoNZ3e1Di6yqBTREtQ"
+  config.consumer_key        = ""
+  config.consumer_secret     = ""
+  config.access_token        = ""
+  config.access_token_secret = ""
 end
 
 search_options = {
@@ -21,7 +21,7 @@ client.search("chaussures", search_options).take(100).each do |tweet|
   users.push(tweet.user.id)
   puts tweet
   client.follow(users)
-  sleep 40
+  sleep 67
 end
 
 
