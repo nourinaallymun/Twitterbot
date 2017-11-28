@@ -17,11 +17,12 @@ client.search("chaussures", search_options).take(100).each do |tweet|
   puts "#{tweet.user.screen_name}: #{tweet.text}"
   client.favorite(tweet)
   client.update_with_media("@#{tweet.user.screen_name} Commandez vos chaussures sur Sarenza.com et bénéficiez d'une réduction de 20€ dès 100€ d'achat. Remplissez vite votre panier sur  http://www.sarenza.com !!", File.new("sarenza.png"))
+  sleep 25
   users = []
   users.push(tweet.user.id)
   puts tweet
   client.follow(users)
-  sleep 67
+  sleep 43
 end
 
 
